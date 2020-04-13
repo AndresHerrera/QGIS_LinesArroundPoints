@@ -2,7 +2,7 @@
 """
 /***************************************************************************
  lines_arround_points
- Creates lines arround a point layer given length and segments
+ Create lines arround a point layer given line length and number of the segments
         -------------------
         begin                : 2020-01-10
         git sha              : $Format:%H$
@@ -57,6 +57,7 @@ for f in pointFeatures:
   geom = f.geometry()
   x = geom.asPoint().x()
   y = geom.asPoint().y()
+  #execute createLineFeatureAroundPoint function 
   createLineFeatureAroundPoint(x,y,100,8)
   
 # update extent of the layer (not necessary)
